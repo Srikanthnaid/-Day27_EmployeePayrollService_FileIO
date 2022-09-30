@@ -44,4 +44,17 @@ public class EmployeePayrollService {
 		System.out.println("\nWriting Employee Payroll to console\n" + employeePayrollList);
 	}
 
+	public void printData(IOService ioService) {
+		if (ioService.equals(IOService.FILE_IO))
+			new EmployeePayrollFileIOService().printData();
+
+	}
+
+	public long countEntries(IOService ioService) {
+		long entries = 0;
+		if (ioService.equals(IOService.FILE_IO))
+			entries = new EmployeePayrollFileIOService().countEntries();
+		return entries;
+	}
+
 }
