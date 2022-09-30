@@ -5,10 +5,10 @@ public class EmployPayrollData {
 	private String name;
 	private double salary;
 
-	public EmployPayrollData() {
+	public EmployPayrollData(int id2, double salary2, String name2) {
 	}
 
-	public EmployPayrollData(int id, double salary, String name) {
+	public EmployPayrollData(int id, String name, double salary) {
 		this.name = name;
 		this.id = id;
 		this.salary = salary;
